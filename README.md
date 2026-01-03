@@ -1,62 +1,69 @@
-<p align="center"><strong>Automated Red Blood Cell Counting from Microscopy Images</strong></p>
+<h1 align="center">RBC Microscopy Cell Counter</h1>
 
 <p align="center">
-Classical computer vision system for detecting and counting red blood cells in microscopic blood smear images
+<strong>Automated Red Blood Cell Counting from Microscopy Images</strong>
+</p>
+
+<p align="center">
+A classical computer vision system for detecting and counting red blood cells (RBCs) in microscopic blood smear images
 </p>
 
 ---
 
 ## Overview
 
-**RBC Microscopy Cell Counter** is a computer vision–based application designed to analyze **microscopic blood smear images** and automatically:
+**RBC Microscopy Cell Counter** is a computer vision–based application that analyzes **microscopic blood smear images** to automatically:
 
-- detect individual red blood cells (RBCs)
-- count the total number of RBCs present in an image
+- Detect individual red blood cells (RBCs)
+- Count the total number of RBCs present in an image
 
-The project focuses purely on **cell detection and counting**, using **classical image processing techniques** such as thresholding, morphological operations, and watershed segmentation.
+The project focuses strictly on **cell detection and counting**, using **classical image processing techniques** such as thresholding, morphological operations, and watershed segmentation.
 
-No disease detection, classification, or medical inference is performed.
+**No disease detection, diagnosis, or medical inference is performed.**
 
 ---
 
 ## Demo
-![Screen_Recording_2026_01_03_193524_V1](https://github.com/user-attachments/assets/09bfd474-af27-434b-b6bf-6c574ec6e34d)<h1 align="center">RBC Microscopy Cell Counter</h1>
+
+![RBC Cell Counter Demo](https://github.com/user-attachments/assets/09bfd474-af27-434b-b6bf-6c574ec6e34d)
 
 ---
-## What This Project Does
 
-- Accepts microscopy images (`.jpg`, `.jpeg`, `.png`)
-- Automatically crops the microscope field of view
-- Enhances contrast using CLAHE
-- Segments RBCs using adaptive thresholding
-- Separates touching cells using distance transform + watershed
-- Counts valid RBCs based on geometric filtering
-- Visualizes detected RBCs with overlays
-- Provides an interactive Streamlit interface
+## Key Features
+
+- Upload microscopy images (`.jpg`, `.jpeg`, `.png`)
+- Automatic cropping of the microscope field of view
+- Contrast enhancement using **CLAHE**
+- Robust RBC segmentation using thresholding + morphology
+- Separation of touching cells using **distance transform + watershed**
+- Geometric filtering to remove noise and artifacts
+- Accurate RBC counting
+- Visual overlays highlighting detected cells
+- Interactive **Streamlit** web interface
 
 ---
 
 ## System Pipeline
 
 1. **Image Upload**
-   - User uploads a microscopy image via Streamlit UI
+   - User uploads a microscopy image through the Streamlit UI
 
 2. **Preprocessing**
-   - Resize for consistent scale
-   - Convert to grayscale
-   - Contrast enhancement (CLAHE)
-   - Noise reduction (Gaussian blur)
+   - Image resizing for consistent scale
+   - Grayscale conversion
+   - Contrast enhancement using CLAHE
+   - Noise reduction with Gaussian blur
 
 3. **RBC Segmentation**
    - Adaptive / Otsu thresholding
    - Morphological opening and erosion
-   - Distance transform for cell separation
-   - Watershed algorithm to split touching cells
+   - Distance transform for separating touching cells
+   - Watershed algorithm for precise cell boundaries
 
 4. **Counting & Visualization**
-   - Filter detected regions by area
-   - Count valid RBCs
-   - Draw circular overlays on detected cells
+   - Region filtering based on area and shape
+   - Final RBC count
+   - Circular overlays drawn on detected cells
 
 ---
 
