@@ -37,7 +37,7 @@ The project focuses strictly on **cell detection and counting**, using **classic
 - Robust RBC segmentation using thresholding + morphology
 - Separation of touching cells using **distance transform + watershed**
 - Geometric filtering to remove noise and artifacts
-- Accurate RBC counting
+- 90% Accurate RBC counting
 - Visual overlays highlighting detected cells
 - Interactive **Streamlit** web interface
 
