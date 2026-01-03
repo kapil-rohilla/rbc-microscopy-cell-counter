@@ -1,4 +1,4 @@
-<h1 align="center">RBC Microscopy Cell Counter</h1>
+![Screen_Recording_2026_01_03_193524_V1](https://github.com/user-attachments/assets/09bfd474-af27-434b-b6bf-6c574ec6e34d)<h1 align="center">RBC Microscopy Cell Counter</h1>
 
 <p align="center"><strong>Automated Red Blood Cell Counting from Microscopy Images</strong></p>
 
@@ -21,6 +21,10 @@ No disease detection, classification, or medical inference is performed.
 
 ---
 
+## Demo
+Uploading Screen Recording 2026-01-03 193524.mp4…
+
+---
 ## What This Project Does
 
 - Accepts microscopy images (`.jpg`, `.jpeg`, `.png`)
